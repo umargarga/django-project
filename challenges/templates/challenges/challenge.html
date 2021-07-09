@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title|title }} Challenge</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block page_title %} {{ title|title }} Challenge {% endblock %}
+
+{% block content %}
     <h1>{{ title|title }} Challenge</h1>
     {% if data is not None %}
         <h2>{{ data }}</h2>
-    {% else %}
-        <p>There is no challenge for this month yet!</p>
-    {% endif %}
-</body>
-</html>
+        {% else %}
+            <p>There is no challenge for this month yet!</p>
+        {% endif %}
+{% endblock %}
+
