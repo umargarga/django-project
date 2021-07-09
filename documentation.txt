@@ -1,0 +1,21 @@
+CREATE PROJECT
+django-admin startproject project-name (one word)
+
+START DEVELOPMENT SERVER
+python manage.py runserver
+
+DJANGO APP
+python manage.py startapp challenges
+
+AFTER ADDING APP URLS, LINK IT TO THE MAIN PROJECT URLS INSIDE PATTERN
+path("challenges/", include("challenges.urls")),
+
+REGISTER APP TO SETTINGS
+Under installed apps
+'challenges',
+
+TEMPLATE
+After creating a template (global template), configure it in the seetings.py (templates array) under DIRS of the project
+BASE_DIR / 'challenges' / 'templates'
+
+
